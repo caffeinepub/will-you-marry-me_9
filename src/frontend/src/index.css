@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700;900&family=Figtree:wght@400;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,41 +6,39 @@
 
 @layer base {
   :root {
-    --radius: 0.625rem;
-    /* Warm ivory background */
-    --background: 0.96 0.018 80;
-    --foreground: 0.18 0.02 20;
-    --card: 0.99 0.008 60;
-    --card-foreground: 0.18 0.02 20;
-    --popover: 0.99 0.008 60;
-    --popover-foreground: 0.18 0.02 20;
-    /* Rose pink primary */
-    --primary: 0.65 0.12 10;
-    --primary-foreground: 0.99 0 0;
-    --secondary: 0.93 0.03 15;
-    --secondary-foreground: 0.65 0.12 10;
-    --muted: 0.93 0.03 15;
-    --muted-foreground: 0.55 0.05 20;
-    --accent: 0.75 0.09 12;
-    --accent-foreground: 0.99 0 0;
+    --radius: 1.25rem;
+    --background: 0.15 0.03 300;
+    --foreground: 0.97 0.01 300;
+    --card: 0.97 0.01 300;
+    --card-foreground: 0.15 0.03 300;
+    --popover: 0.97 0.01 300;
+    --popover-foreground: 0.15 0.03 300;
+    --primary: 0.65 0.26 358;
+    --primary-foreground: 1 0 0;
+    --secondary: 0.25 0.05 300;
+    --secondary-foreground: 0.85 0.05 300;
+    --muted: 0.25 0.05 300;
+    --muted-foreground: 0.65 0.05 300;
+    --accent: 0.7 0.22 340;
+    --accent-foreground: 1 0 0;
     --destructive: 0.577 0.245 27.325;
     --destructive-foreground: 0.985 0 0;
-    --border: 0.88 0.04 15;
-    --input: 0.88 0.04 15;
-    --ring: 0.65 0.12 10;
-    --chart-1: 0.646 0.222 41.116;
-    --chart-2: 0.6 0.118 184.704;
-    --chart-3: 0.398 0.07 227.392;
-    --chart-4: 0.828 0.189 84.429;
-    --chart-5: 0.769 0.188 70.08;
-    --sidebar: 0.985 0 0;
-    --sidebar-foreground: 0.145 0 0;
-    --sidebar-primary: 0.65 0.12 10;
-    --sidebar-primary-foreground: 0.985 0 0;
-    --sidebar-accent: 0.93 0.03 15;
-    --sidebar-accent-foreground: 0.65 0.12 10;
-    --sidebar-border: 0.88 0.04 15;
-    --sidebar-ring: 0.65 0.12 10;
+    --border: 0.35 0.05 300;
+    --input: 0.35 0.05 300;
+    --ring: 0.65 0.26 358;
+    --chart-1: 0.646 0.222 5;
+    --chart-2: 0.6 0.118 184;
+    --chart-3: 0.398 0.07 227;
+    --chart-4: 0.828 0.189 84;
+    --chart-5: 0.769 0.188 70;
+    --sidebar: 0.15 0.03 300;
+    --sidebar-foreground: 0.97 0.01 300;
+    --sidebar-primary: 0.65 0.26 358;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.25 0.05 300;
+    --sidebar-accent-foreground: 0.85 0.05 300;
+    --sidebar-border: 0.35 0.05 300;
+    --sidebar-ring: 0.65 0.26 358;
   }
 
   * {
@@ -48,23 +46,114 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: "Figtree", system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
   }
 }
 
-/* Floating hearts background */
+/* ── Animated gradient background ── */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-bg {
+  background: linear-gradient(
+    135deg,
+    #1a0533,
+    #3d0066,
+    #7b0066,
+    #c2006e,
+    #ff1a6e,
+    #ff5e62,
+    #9b0080,
+    #1a0533
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 10s ease infinite;
+}
+
+.animated-bg-celebration {
+  background: linear-gradient(
+    135deg,
+    #3d0066,
+    #9b0080,
+    #ff1a6e,
+    #ff8c42,
+    #ff1a6e,
+    #c2006e,
+    #3d0066
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 6s ease infinite;
+}
+
+/* ── Glassmorphism card ── */
+.glass-card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 2px 8px rgba(255, 50, 120, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  border-radius: 28px;
+}
+
+/* ── YES button glow ── */
+@keyframes yesGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px 4px rgba(255, 30, 100, 0.6), 0 4px 16px
+      rgba(255, 80, 80, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 36px 10px rgba(255, 30, 100, 0.9), 0 4px 24px
+      rgba(255, 80, 80, 0.6);
+  }
+}
+
+.yes-btn {
+  background: linear-gradient(135deg, #ff1e64, #ff5e62);
+  animation: yesGlow 2.4s ease-in-out infinite;
+  transition: transform 0.18s ease, filter 0.18s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.yes-btn:hover,
+.yes-btn:active {
+  transform: scale(1.08) translateY(-3px);
+  filter: brightness(1.12);
+}
+
+/* ── Floating confetti particles ── */
 @keyframes floatUp {
   0% {
-    transform: translateY(100vh) scale(0.5) rotate(-10deg);
+    transform: translateY(100vh) scale(0.6) rotate(-10deg);
     opacity: 0;
   }
   10% {
-    opacity: 0.7;
+    opacity: 0.75;
   }
   90% {
     opacity: 0.4;
   }
   100% {
-    transform: translateY(-10vh) scale(1.1) rotate(10deg);
+    transform: translateY(-15vh) scale(1.1) rotate(15deg);
     opacity: 0;
   }
 }
@@ -75,17 +164,25 @@
     margin-left: 0;
   }
   50% {
-    margin-left: 30px;
+    margin-left: 40px;
   }
 }
 
+.floating-confetti {
+  position: absolute;
+  animation: floatUp linear infinite, sway ease-in-out infinite;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ── Falling confetti ── */
 @keyframes fallDown {
   0% {
     transform: translateY(-10vh) rotate(0deg);
     opacity: 0;
   }
   10% {
-    opacity: 0.8;
+    opacity: 0.9;
   }
   100% {
     transform: translateY(110vh) rotate(360deg);
@@ -93,65 +190,84 @@
   }
 }
 
-@keyframes pulse-glow {
-  0%,
-  100% {
-    box-shadow: 0 0 20px 4px oklch(0.65 0.12 10 / 0.4);
-  }
-  50% {
-    box-shadow: 0 0 35px 8px oklch(0.65 0.12 10 / 0.7);
-  }
-}
-
-@keyframes heartbeat {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  25% {
-    transform: scale(1.15);
-  }
-  50% {
-    transform: scale(1);
-  }
-  75% {
-    transform: scale(1.1);
-  }
-}
-
-.floating-heart {
-  position: absolute;
-  animation: floatUp linear infinite, sway ease-in-out infinite;
-  pointer-events: none;
-  user-select: none;
-}
-
-.falling-heart {
+.falling-confetti {
   position: fixed;
   animation: fallDown linear infinite;
   pointer-events: none;
   user-select: none;
-  font-size: 1.5rem;
 }
 
-.yes-button {
-  animation: pulse-glow 2s ease-in-out infinite;
+/* ── Emoji wiggle ── */
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(-4deg) scale(1);
+  }
+  50% {
+    transform: rotate(4deg) scale(1.1);
+  }
 }
 
-.yes-button:hover {
-  transform: scale(1.08);
-  transition: transform 0.2s ease;
-}
-
-.heart-icon {
-  animation: heartbeat 1.5s ease-in-out infinite;
+.cake-icon {
+  animation: wiggle 1.6s ease-in-out infinite;
   display: inline-block;
 }
 
-.dancing-script {
-  font-family: "Dancing Script", cursive;
+/* ── Celebration card entrance ── */
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  65% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
-.playfair {
-  font-family: "Playfair Display", serif;
+.bounce-in {
+  animation: bounceIn 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* ── Shimmer text ── */
+@keyframes textShimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    #fff 0%,
+    #ffd6f0 30%,
+    #ff6eb5 50%,
+    #ffd6f0 70%,
+    #fff 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShimmer 3s linear infinite;
+}
+
+/* ── No button ghost style ── */
+.no-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.65);
+  cursor: pointer;
+  transition: background 0.15s ease;
+  backdrop-filter: blur(8px);
+}
+
+.no-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
 }

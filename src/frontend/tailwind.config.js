@@ -10,14 +10,12 @@ export default {
     container: {
       center: true,
       padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
+      screens: { "2xl": "1400px" },
     },
     extend: {
       fontFamily: {
-        dancing: ["'Dancing Script'", "cursive"],
-        playfair: ["'Playfair Display'", "serif"],
+        display: ["'Fraunces'", "serif"],
+        body: ["'Figtree'", "system-ui", "sans-serif"],
       },
       colors: {
         border: "oklch(var(--border))",
@@ -73,12 +71,12 @@ export default {
       },
       borderRadius: {
         lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        md: "calc(var(--radius) - 4px)",
+        sm: "calc(var(--radius) - 8px)",
       },
       boxShadow: {
-        xs: "0 1px 2px 0 rgba(0,0,0,0.05)",
-        rose: "0 0 20px 4px oklch(0.65 0.12 10 / 0.4)",
+        card: "0 10px 40px oklch(0.62 0.22 5 / 0.15), 0 2px 8px oklch(0.62 0.22 5 / 0.08)",
+        pink: "0 0 24px 6px oklch(0.62 0.22 5 / 0.4)",
       },
       keyframes: {
         "accordion-down": {
