@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700;900&family=Figtree:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Figtree:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -7,38 +8,38 @@
 @layer base {
   :root {
     --radius: 1.25rem;
-    --background: 0.15 0.03 300;
-    --foreground: 0.97 0.01 300;
-    --card: 0.97 0.01 300;
-    --card-foreground: 0.15 0.03 300;
-    --popover: 0.97 0.01 300;
-    --popover-foreground: 0.15 0.03 300;
-    --primary: 0.65 0.26 358;
+    --background: 0.97 0.03 350;
+    --foreground: 0.22 0.06 350;
+    --card: 1 0 0;
+    --card-foreground: 0.22 0.06 350;
+    --popover: 1 0 0;
+    --popover-foreground: 0.22 0.06 350;
+    --primary: 0.62 0.22 5;
     --primary-foreground: 1 0 0;
-    --secondary: 0.25 0.05 300;
-    --secondary-foreground: 0.85 0.05 300;
-    --muted: 0.25 0.05 300;
-    --muted-foreground: 0.65 0.05 300;
-    --accent: 0.7 0.22 340;
-    --accent-foreground: 1 0 0;
+    --secondary: 0.94 0.04 350;
+    --secondary-foreground: 0.4 0.08 350;
+    --muted: 0.94 0.04 350;
+    --muted-foreground: 0.55 0.08 350;
+    --accent: 0.88 0.1 10;
+    --accent-foreground: 0.4 0.08 350;
     --destructive: 0.577 0.245 27.325;
     --destructive-foreground: 0.985 0 0;
-    --border: 0.35 0.05 300;
-    --input: 0.35 0.05 300;
-    --ring: 0.65 0.26 358;
+    --border: 0.9 0.06 350;
+    --input: 0.9 0.06 350;
+    --ring: 0.62 0.22 5;
     --chart-1: 0.646 0.222 5;
     --chart-2: 0.6 0.118 184;
     --chart-3: 0.398 0.07 227;
     --chart-4: 0.828 0.189 84;
     --chart-5: 0.769 0.188 70;
-    --sidebar: 0.15 0.03 300;
-    --sidebar-foreground: 0.97 0.01 300;
-    --sidebar-primary: 0.65 0.26 358;
+    --sidebar: 0.97 0.03 350;
+    --sidebar-foreground: 0.22 0.06 350;
+    --sidebar-primary: 0.62 0.22 5;
     --sidebar-primary-foreground: 1 0 0;
-    --sidebar-accent: 0.25 0.05 300;
-    --sidebar-accent-foreground: 0.85 0.05 300;
-    --sidebar-border: 0.35 0.05 300;
-    --sidebar-ring: 0.65 0.26 358;
+    --sidebar-accent: 0.94 0.04 350;
+    --sidebar-accent-foreground: 0.4 0.08 350;
+    --sidebar-border: 0.9 0.06 350;
+    --sidebar-ring: 0.62 0.22 5;
   }
 
   * {
@@ -52,7 +53,7 @@
   }
 }
 
-/* ── Animated gradient background ── */
+/* ── Animated gradient background (romantic pink/white) ── */
 @keyframes gradientShift {
   0% {
     background-position: 0% 50%;
@@ -74,42 +75,41 @@
 .animated-bg {
   background: linear-gradient(
     135deg,
-    #1a0533,
-    #3d0066,
-    #7b0066,
-    #c2006e,
-    #ff1a6e,
-    #ff5e62,
-    #9b0080,
-    #1a0533
+    #fff0f5,
+    #ffd6e8,
+    #ffb3d1,
+    #ffe0ec,
+    #fff5f8,
+    #ffc8dc,
+    #fff0f5
   );
   background-size: 400% 400%;
-  animation: gradientShift 10s ease infinite;
+  animation: gradientShift 12s ease infinite;
 }
 
 .animated-bg-celebration {
   background: linear-gradient(
     135deg,
-    #3d0066,
-    #9b0080,
-    #ff1a6e,
-    #ff8c42,
-    #ff1a6e,
-    #c2006e,
-    #3d0066
+    #ffd6e8,
+    #ffb3d1,
+    #ff80b0,
+    #ff4d94,
+    #ffb3d1,
+    #ffd6e8,
+    #ffe9f3
   );
   background-size: 400% 400%;
-  animation: gradientShift 6s ease infinite;
+  animation: gradientShift 7s ease infinite;
 }
 
 /* ── Glassmorphism card ── */
 .glass-card {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.72);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 2px 8px rgba(255, 50, 120, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  border: 1.5px solid rgba(255, 100, 150, 0.25);
+  box-shadow: 0 8px 40px rgba(255, 60, 120, 0.15), 0 2px 12px
+    rgba(255, 100, 150, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.85);
   border-radius: 28px;
 }
 
@@ -117,17 +117,17 @@
 @keyframes yesGlow {
   0%,
   100% {
-    box-shadow: 0 0 20px 4px rgba(255, 30, 100, 0.6), 0 4px 16px
-      rgba(255, 80, 80, 0.4);
+    box-shadow: 0 0 20px 4px rgba(255, 50, 120, 0.45), 0 4px 16px
+      rgba(255, 100, 130, 0.3);
   }
   50% {
-    box-shadow: 0 0 36px 10px rgba(255, 30, 100, 0.9), 0 4px 24px
-      rgba(255, 80, 80, 0.6);
+    box-shadow: 0 0 36px 10px rgba(255, 50, 120, 0.7), 0 4px 24px
+      rgba(255, 100, 130, 0.5);
   }
 }
 
 .yes-btn {
-  background: linear-gradient(135deg, #ff1e64, #ff5e62);
+  background: linear-gradient(135deg, #ff4d94, #ff85b3);
   animation: yesGlow 2.4s ease-in-out infinite;
   transition: transform 0.18s ease, filter 0.18s ease;
   border: none;
@@ -137,52 +137,51 @@
 .yes-btn:hover,
 .yes-btn:active {
   transform: scale(1.08) translateY(-3px);
-  filter: brightness(1.12);
+  filter: brightness(1.08);
 }
 
-/* ── Floating confetti particles ── */
+/* ── Floating hearts ── */
 @keyframes floatUp {
   0% {
-    transform: translateY(100vh) scale(0.6) rotate(-10deg);
+    transform: translateY(100vh) scale(0.6) rotate(-8deg);
     opacity: 0;
   }
-  10% {
-    opacity: 0.75;
+  8% {
+    opacity: 0.65;
   }
   90% {
-    opacity: 0.4;
+    opacity: 0.3;
   }
   100% {
-    transform: translateY(-15vh) scale(1.1) rotate(15deg);
+    transform: translateY(-15vh) scale(1.1) rotate(12deg);
     opacity: 0;
   }
 }
-
 @keyframes sway {
   0%,
   100% {
     margin-left: 0;
   }
   50% {
-    margin-left: 40px;
+    margin-left: 38px;
   }
 }
 
-.floating-confetti {
+.floating-heart {
   position: absolute;
   animation: floatUp linear infinite, sway ease-in-out infinite;
   pointer-events: none;
   user-select: none;
 }
 
-/* ── Falling confetti ── */
+/* ── Falling celebration hearts ── */
 @keyframes fallDown {
   0% {
     transform: translateY(-10vh) rotate(0deg);
     opacity: 0;
   }
-  10% {
-    opacity: 0.9;
+  8% {
+    opacity: 0.85;
   }
   100% {
     transform: translateY(110vh) rotate(360deg);
@@ -190,44 +189,42 @@
   }
 }
 
-.falling-confetti {
+.falling-heart {
   position: fixed;
   animation: fallDown linear infinite;
   pointer-events: none;
   user-select: none;
 }
 
-/* ── Emoji wiggle ── */
-@keyframes wiggle {
+/* ── Ring pulse ── */
+@keyframes ringPulse {
   0%,
   100% {
-    transform: rotate(-4deg) scale(1);
+    transform: scale(1) rotate(-5deg);
   }
   50% {
-    transform: rotate(4deg) scale(1.1);
+    transform: scale(1.15) rotate(5deg);
   }
 }
-
-.cake-icon {
-  animation: wiggle 1.6s ease-in-out infinite;
+.ring-icon {
+  animation: ringPulse 1.8s ease-in-out infinite;
   display: inline-block;
 }
 
-/* ── Celebration card entrance ── */
+/* ── Celebration bounce-in ── */
 @keyframes bounceIn {
   0% {
     transform: scale(0.5);
     opacity: 0;
   }
   65% {
-    transform: scale(1.08);
+    transform: scale(1.06);
   }
   100% {
     transform: scale(1);
     opacity: 1;
   }
 }
-
 .bounce-in {
   animation: bounceIn 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
@@ -241,15 +238,14 @@
     background-position: 200% center;
   }
 }
-
 .shimmer-text {
   background: linear-gradient(
     90deg,
-    #fff 0%,
-    #ffd6f0 30%,
-    #ff6eb5 50%,
-    #ffd6f0 70%,
-    #fff 100%
+    #cc2060 0%,
+    #ff4d94 30%,
+    #ff85b3 50%,
+    #ff4d94 70%,
+    #cc2060 100%
   );
   background-size: 200% auto;
   -webkit-background-clip: text;
@@ -258,16 +254,15 @@
   animation: textShimmer 3s linear infinite;
 }
 
-/* ── No button ghost style ── */
+/* ── No button muted style ── */
 .no-btn {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: rgba(255, 255, 255, 0.65);
+  background: rgba(200, 200, 200, 0.25);
+  border: 1.5px solid rgba(180, 180, 180, 0.45);
+  color: rgba(160, 100, 120, 0.75);
   cursor: pointer;
   transition: background 0.15s ease;
-  backdrop-filter: blur(8px);
 }
 
 .no-btn:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(200, 200, 200, 0.3);
 }

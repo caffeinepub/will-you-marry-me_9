@@ -1,31 +1,29 @@
-# Will You Marry Me
+# Will You Marry Me - Proposal Page
 
 ## Current State
-New project, no existing app.
+Project currently has a birthday page for Aakash Sir with glassmorphism styling.
 
 ## Requested Changes (Diff)
 
 ### Add
-- Single-page romantic proposal experience
-- Animated floating hearts background
-- Proposal message/question: "Will You Marry Me?"
-- YES button (large, prominent, rose pink)
-- NO button that escapes the cursor on hover (moves to a random position on screen)
-- On YES click: show a love meme image with celebration animation (confetti/hearts burst)
-- Pink and white romantic color scheme
-- Mobile-friendly layout (optimized for Chrome on phone)
+- Romantic proposal page replacing the current content
+- Animated pink/white romantic background (floating hearts, soft gradients)
+- Central card with proposal question: "Will you marry me?"
+- Two buttons: "Yes" and "No"
+- "No" button moves away on hover (desktop) and on touch/click (mobile), staying within viewport
+- On "Yes" click: show celebration screen with love meme image and "Love you" message
 
 ### Modify
-- N/A
+- Replace existing birthday content with proposal content
 
 ### Remove
-- N/A
+- Birthday-specific text, confetti emojis, Aakash Sir references
 
 ## Implementation Plan
-1. Frontend-only interactive page
-2. Floating animated hearts in background using CSS animations
-3. Centered proposal card with script/serif fonts
-4. YES button triggers celebration screen with meme image
-5. NO button uses JS mouseover event to teleport to random screen position (touch-aware for mobile: also moves on touchstart)
-6. Celebration screen with falling hearts/confetti animation overlay
-7. Use generated love-you-meme image at /assets/generated/love-you-meme.dim_600x500.png
+1. Replace App.tsx with romantic proposal page
+2. Animated gradient background in pink/white/rose tones with floating hearts
+3. Glassmorphism card in the center with proposal text
+4. Yes button (pink, prominent) and No button (gray, evasive)
+5. No button teleports randomly within viewport on mouseover and touchstart
+6. Yes click shows celebration screen: hearts animation + meme image + "Love you" message
+7. Mobile-first, large touch targets, fully responsive
